@@ -38,7 +38,7 @@ namespace iTrellisAppTest
             //Create test Todo and instantiate repository:
             Todo testTodo = new Todo
             {
-                Id = -1,
+                Id = -1, //Not necessarily reliable due to the possiblility of underflows
                 Title = "testTitle",
                 Deadline = new DateTime(0001, 1, 1),
                 Details = "testDetails",
