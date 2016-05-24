@@ -1,0 +1,20 @@
+﻿.inputDiv{
+    margin: 0.5em;
+}
+
+.error{
+    color: red;
+}
+
+.true{
+    color:gray;
+    text-decoration:line-through;
+}
+
+.overdue{
+    background-color:#FFFF00;
+}
+
+.pointer{
+    cursor: pointer;
+}

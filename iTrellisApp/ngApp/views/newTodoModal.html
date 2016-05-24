@@ -1,0 +1,50 @@
+﻿<div class="row">
+    <div class="text-center">
+        <h1>New Task</h1>
+    </div>
+
+    <form name="addForm">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-group">
+
+                <div class="row inputDiv">
+                    <div class="col-md-4">
+                        <label>Task Name:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input name="title" type="text" ng-model="vm.todo.title" required />
+                        <p class="error" ng-show="vm.showErrorMessage"> Task name is required.</p>
+                    </div>
+                </div>
+
+                <div class="row inputDiv">
+                    <div class="col-md-4">
+                        <label>Deadline:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input name="deadline" type="date" ng-model="vm.todo.deadline" />
+                    </div>
+                </div>
+
+                <div class="row inputDiv">
+                    <div class="col-md-4">
+                        <label>Details:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea name="details" cols="22" rows="4" ng-model="vm.todo.details"></textarea>
+                    </div>
+                </div>
+
+                <br />
+
+                <input ng-show="addForm.$invalid" class="btn btn-danger" type="button" value="Submit" ng-click="vm.showErrorMessage = true"/>
+                <input ng-show="addForm.$valid" class="btn btn-primary" type="submit" value="Submit" ng-click="vm.createTodo()" />
+
+                <input class="btn btn-warning" type="button" value="Cancel" ng-click="vm.closeModal()" />
+
+            </div>
+        </div>
+    </form>
+    
+</div>
